@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <header>
@@ -15,22 +16,28 @@
       </nav>
       <hr />
     </header>
+
     <main>
       <h1>
         Here is the main section of our page - it consists of a new articles
       </h1>
 
-      <article>
+      <article id="article-one">
         <h1>
           Article 1 - 1995 was a pretty crazy year for programming languages!
         </h1>
 
         <p>Don't believe me? Check this table out:</p>
 
-        <table>
-          <thead>
-            <tr>
-              <th>Language</th>
+        <div class="advertisement">
+          <h1 class="advertisement__header"></h1>
+          <p class="advertisement__text"></p>
+        </div>
+
+        <table class="my-table">
+          <thead class="my-table__header">
+            <tr class="my-table__row">
+              <th class="my-table__row">Language</th>
               <th>Designed By</th>
               <th>First Appeared</th>
             </tr>
@@ -75,7 +82,7 @@
         </table>
       </article>
 
-      <article>
+      <article class="article-two">
         <h2>Article 2 - Coming soon...</h2>
       </article>
 

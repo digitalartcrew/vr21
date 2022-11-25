@@ -1,0 +1,19 @@
+body {
+  background: green;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.footer {
+  font-size: 100px;
+}
+
+article {
+  color: rgb(121,14,12);
+  background: #fff;
+}
+
+.my-table {
+    border: 2px dotted blue;
+    margin-left: 200px;
+    padding: 20px;
+}
