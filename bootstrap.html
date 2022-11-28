@@ -17,148 +17,294 @@
       crossorigin="anonymous"
     />
 
-    <style>
+    <!-- <style>
       .col-md-3 {
         border: solid 1px black;
       }
-    </style>
+    </style> -->
   </head>
+
+  <!-- Add a navbar with a button that says "Add" -->
+  <!-- when add button is clicked a modal will appear with a form to add new data -->
+  <!-- Form should have an input for image, title and description -->
+  <!-- add save button to add form  -->
+  <!-- replace column text with cards and image, title and desciption -->
+  <!-- Each card will have an update and delete button -->
+  <!-- When update is clicked a modal is opened with form that has update inputs  and a save button -->
+  <!-- When delete button is clicked, a modal will ask "Are you sure you want to delete? - there will be two buttons that say "Confirm or Cancel"" -->
 
   <body>
     <div class="container">
+      <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand">Navbar</a>
+
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Add
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    Modal title
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label"
+                        >Email address</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                      />
+                      <div id="emailHelp" class="form-text">
+                        We'll never share your email with anyone else.
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label"
+                        >Password</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="exampleInputPassword1"
+                      />
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="exampleCheck1"
+                      />
+                      <label class="form-check-label" for="exampleCheck1"
+                        >Check me out</label
+                      >
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                      Submit
+                    </button>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    Save changes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://via.placeholder.com/150
+
+C/O https://placeholder.com/"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://via.placeholder.com/150
+
+C/O https://placeholder.com/"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://via.placeholder.com/150
+
+C/O https://placeholder.com/"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://via.placeholder.com/150
+
+C/O https://placeholder.com/"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="row">
         <div class="col-md-3">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta
-            corporis deserunt praesentium similique labore animi laudantium,
-            excepturi accusamus commodi, error esse adipisci fugit saepe
-            accusantium pariatur impedit corrupti veritatis reiciendis!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus
+            deleniti molestias quo ad aliquid voluptas tenetur. Voluptas, vero
+            fugit ratione quas alias reiciendis. Ea laboriosam cupiditate
+            similique molestiae voluptate esse?
           </p>
         </div>
         <div class="col-md-3">
           <p>
-            Facilis deleniti odio minus commodi nemo eius! Impedit repellat
-            voluptas amet veniam ipsam. Quasi corrupti sequi culpa totam, ea
-            voluptate fugiat quaerat quidem inventore nostrum quibusdam harum
-            velit error nesciunt!
+            Recusandae, sequi suscipit placeat aliquam minima quod error. Dolor
+            harum deleniti nulla aliquid, nisi explicabo earum commodi veniam
+            quas, enim iure tenetur dolorem eius dignissimos modi aspernatur, ea
+            ipsa neque!
           </p>
         </div>
         <div class="col-md-3">
           <p>
-            Ex nostrum provident dolores, aperiam saepe amet placeat odio quo.
-            Corporis magni laudantium veritatis deserunt blanditiis fuga. Minima
-            similique neque odio culpa! At iure, cumque laboriosam doloribus
-            tempore quos recusandae.
+            Maxime earum est velit in harum accusantium praesentium sint iste
+            labore eum saepe, animi impedit expedita. Qui ab voluptatem saepe
+            suscipit, assumenda, dolor animi alias minima, placeat ratione a
+            odit.
           </p>
         </div>
         <div class="col-md-3">
           <p>
-            Explicabo delectus ex neque numquam praesentium voluptatem et, atque
-            maiores odio laboriosam! Magni, blanditiis? Illum, suscipit quae?
-            Voluptate blanditiis quae magni rem natus eos, adipisci repellat
-            porro fugiat est aspernatur.
+            Animi officia hic voluptate error deserunt, maiores deleniti ducimus
+            provident iste sed, necessitatibus adipisci laborum nam architecto
+            at in expedita asperiores veniam nobis consectetur harum magni amet
+            esse exercitationem. Quo.
           </p>
         </div>
       </div>
       <div class="row">
         <div class="col-md-3">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A animi
-            expedita dignissimos suscipit magni tenetur nostrum? Reiciendis
-            repellendus beatae aperiam maiores, corporis, consectetur ut animi
-            perspiciatis commodi cum tenetur laborum?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque,
+            eius. Quisquam et, repellendus, hic voluptatum sequi quibusdam
+            obcaecati animi blanditiis consequatur culpa architecto atque
+            eligendi ad fugiat nobis earum incidunt.
           </p>
         </div>
         <div class="col-md-3">
           <p>
-            Aut voluptatibus possimus reprehenderit error quisquam autem sint
-            dolorem magnam cumque. Quam magnam sed quidem libero sit vel
-            officia, illum a dolor cum. Expedita debitis rerum consequuntur est
-            voluptatum in.
+            Hic nihil beatae optio dolores facilis dolor libero maxime atque
+            eaque repellendus sit nulla molestiae, quibusdam vitae unde quia at,
+            accusantium blanditiis modi inventore placeat aperiam iure. A, odio
+            maiores.
           </p>
         </div>
         <div class="col-md-3">
           <p>
-            Sint mollitia a animi esse, exercitationem officiis ratione
-            praesentium repellendus impedit asperiores deserunt nisi unde illo
-            nulla cumque labore dolore incidunt consequuntur modi sapiente odio
-            cum facilis beatae totam! Omnis.
+            Natus vitae quod blanditiis, distinctio ab aliquam velit corporis
+            sunt est! Sequi rerum molestias dicta, ab debitis, molestiae
+            temporibus doloremque, sapiente eveniet ducimus iusto deleniti eaque
+            quas non esse architecto.
           </p>
         </div>
         <div class="col-md-3">
           <p>
-            Omnis obcaecati qui nostrum impedit officia, eveniet aperiam a
-            dolore facere laboriosam quibusdam quasi cumque illo vero ad earum
-            voluptatem magni exercitationem sapiente natus. Cumque quam nobis
-            laborum expedita rem.
-          </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-            aperiam dolore eligendi perferendis magnam temporibus ea ab commodi
-            non optio fugit soluta, recusandae suscipit maiores iusto voluptatem
-            nostrum, cumque reprehenderit!
-          </p>
-        </div>
-        <div class="col-md-3">
-          <p>
-            Soluta possimus quam numquam dolorem facilis amet dicta similique
-            dolore officiis. Sunt neque natus est sapiente? Inventore eius ea
-            magnam accusantium quisquam mollitia adipisci aliquid dicta, numquam
-            itaque cumque voluptatum.
-          </p>
-        </div>
-        <div class="col-md-3">
-          <p>
-            Provident earum magni consequatur laborum consequuntur quo
-            exercitationem animi facere numquam at rem, deleniti id asperiores
-            inventore tenetur omnis. Animi iste quidem cumque! Accusamus sequi,
-            error enim eligendi magnam totam!
-          </p>
-        </div>
-        <div class="col-md-3">
-          <p>
-            Quasi ipsa aliquid laboriosam illo repudiandae quod veritatis
-            necessitatibus? Architecto, repudiandae repellendus incidunt hic
-            deleniti iusto mollitia perspiciatis quidem placeat, iste cupiditate
-            voluptas doloremque autem aspernatur vitae, quisquam temporibus ab?
+            Inventore eum veritatis delectus sunt dolor itaque repellat expedita
+            minima alias! Ipsa suscipit eos error neque deserunt atque!
+            Doloribus aliquid porro optio ea vero quae adipisci, dicta ipsum
+            officia itaque?
           </p>
         </div>
       </div>
       <div class="row">
         <div class="col-md-3">
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-            eius possimus qui dolorem exercitationem. Dolorum nisi deleniti
-            alias cupiditate, ab, consequatur voluptatibus, fuga quis fugiat
-            laboriosam delectus illum necessitatibus maiores?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+            omnis hic reprehenderit consequatur incidunt laudantium assumenda
+            enim illum repudiandae vitae animi, facilis voluptate porro ut non
+            eius nam eos libero!
           </p>
         </div>
         <div class="col-md-3">
           <p>
-            Ea eligendi alias natus repudiandae explicabo labore facilis
-            provident incidunt nam nostrum optio totam ad quam nemo culpa
-            perferendis iste repellat a asperiores, minima corrupti? Nemo unde
-            at molestiae laborum?
+            Fugiat molestiae ipsa voluptatem blanditiis explicabo alias in.
+            Neque, ut. Quaerat veritatis placeat, tenetur assumenda vitae
+            ratione in quae ipsam labore harum atque facere autem. Assumenda rem
+            voluptates adipisci nostrum?
           </p>
         </div>
         <div class="col-md-3">
           <p>
-            Voluptas dolor quaerat explicabo quidem debitis consequuntur saepe
-            aliquid temporibus dolorem necessitatibus hic impedit ipsam
-            consectetur deleniti, dolorum atque eum fugit ullam illum dolores
-            exercitationem natus veritatis. Repellendus, ipsa ducimus!
+            Odit similique nesciunt nam sequi tempora quis accusantium maiores
+            rem quos libero ipsa molestias, repellendus repellat ipsum culpa
+            voluptatibus id fuga ad? Voluptatibus at, iure veniam numquam id
+            officia libero.
           </p>
         </div>
         <div class="col-md-3">
           <p>
-            Repellat iusto rerum veniam sapiente non odit vero consequatur totam
-            provident asperiores nobis nihil molestias nemo eaque maiores,
-            consectetur voluptatum nisi qui eum possimus vitae, dignissimos
-            distinctio! Autem, vel est?
+            Cum eius neque maiores quo necessitatibus eaque ad ipsam
+            perspiciatis alias ea libero facere corporis, assumenda, molestias
+            reprehenderit iusto similique ipsum nihil beatae asperiores
+            laudantium architecto. At inventore accusantium laboriosam!
           </p>
         </div>
       </div>
