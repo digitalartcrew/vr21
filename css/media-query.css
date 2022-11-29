@@ -1,0 +1,71 @@
+@media (min-width: 320px) {
+    body {
+        background-color: red;
+    }
+
+    .resize {
+        background-color: black;
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@media (min-width: 480px) {
+    body {
+        background-color:  blue;
+    }
+
+    .resize {
+        background-color: black;
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        background-color: purple;
+    }
+
+    .resize {
+        background-color: black;
+        height: 500px;
+        width: 500px;
+    }
+}
+
+@media (min-width: 801px) {
+    body {
+        background-color: yellow;
+    }
+
+    .resize {
+        background-color: black;
+        height: 700px;
+        width: 700px;
+    }
+}
+
+@media (min-width: 1025px) {
+    body {
+        background-color: green;
+    }
+
+    .resize {
+        background-color: black;
+        height: 900px;
+        width: 900px;
+    }
+}
+
+@media (min-width: 1281px) {
+    body {
+        background-color: orange;
+    }
+
+    .resize {
+        background-color: black;
+        height: 1100px;
+        width: 1100px;
+    }
+}
