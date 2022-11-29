@@ -77,8 +77,8 @@
         height: 100px;
         width: 100px;
         position: absolute;
-        top: 0;
-        bottom: 160px;
+        top: 10px;
+        left: 200px;
     }
 }
 
@@ -91,6 +91,15 @@
         background-color: black;
         height: 900px;
         width: 900px;
+    }
+
+    .move-me {
+        background-color: cornflowerblue;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        top: 8px;
+        left: 300px;
     }
 }
 
@@ -110,7 +119,7 @@
         height: 100px;
         width: 100px;
         position: absolute;
-        top: 60px;
-        bottom: 40px;
+        top: 97px;
+        right: 1000px;
     }
 }

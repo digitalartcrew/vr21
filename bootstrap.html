@@ -17,24 +17,449 @@
       crossorigin="anonymous"
     />
 
-    <!-- <style>
-      .col-md-3 {
-        border: solid 1px black;
+    <style>
+      .row {
+        margin-bottom: 10px;
       }
-    </style> -->
+    </style>
   </head>
 
   <!-- Add a navbar with a button that says "Add" -->
-  <!-- when add button is clicked a modal will appear with a form to add new data -->
+  <!-- when add button is clicked a modal will appear -->
+  <!-- Add form to to modal -->
   <!-- Form should have an input for image, title and description -->
   <!-- add save button to add form  -->
-  <!-- replace column text with cards and image, title and desciption -->
+  <!--  4 rows x 4 columns of replace cards with image, title and desciption-->
+
   <!-- Each card will have an update and delete button -->
   <!-- When update is clicked a modal is opened with form that has update inputs  and a save button -->
   <!-- When delete button is clicked, a modal will ask "Are you sure you want to delete? - there will be two buttons that say "Confirm or Cancel"" -->
 
   <body>
-    <div class="container"></div>
+    <div class="container">
+      <header>
+        <nav class="navbar bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand">Classic Cars</a>
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Add
+            </button>
+
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                      Modal title
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="imageUrl" class="form-label"
+                          >Image Url</label
+                        >
+                        <input
+                          class="form-control"
+                          id="imageUrl"
+                          type="url"
+                          name="imageUrl"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input
+                          class="form-control"
+                          id="title"
+                          type="text"
+                          id="url"
+                          name="title"
+                        />
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="description" class="form-label"
+                          >Description</label
+                        >
+                        <input
+                          class="form-control"
+                          id="description"
+                          type="text"
+                          name="description"
+                        />
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://www.motortrend.com/uploads/sites/7/2019/08/1964-Chevrolet-Impala-Passenger-Side-Front-View-02.jpg?fit=around%7C875:492"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://www.motortrend.com/uploads/sites/7/2019/08/1964-Chevrolet-Impala-Passenger-Side-Front-View-02.jpg?fit=around%7C875:492"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://www.motortrend.com/uploads/sites/7/2019/08/1964-Chevrolet-Impala-Passenger-Side-Front-View-02.jpg?fit=around%7C875:492"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://www.motortrend.com/uploads/sites/7/2019/08/1964-Chevrolet-Impala-Passenger-Side-Front-View-02.jpg?fit=around%7C875:492"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://www.motortrend.com/uploads/sites/7/2019/08/1964-Chevrolet-Impala-Passenger-Side-Front-View-02.jpg?fit=around%7C875:492"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://www.motortrend.com/uploads/sites/7/2019/08/1964-Chevrolet-Impala-Passenger-Side-Front-View-02.jpg?fit=around%7C875:492"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://www.motortrend.com/uploads/sites/7/2019/08/1964-Chevrolet-Impala-Passenger-Side-Front-View-02.jpg?fit=around%7C875:492"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://www.motortrend.com/uploads/sites/7/2019/08/1964-Chevrolet-Impala-Passenger-Side-Front-View-02.jpg?fit=around%7C875:492"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://www.motortrend.com/uploads/sites/7/2019/08/1964-Chevrolet-Impala-Passenger-Side-Front-View-02.jpg?fit=around%7C875:492"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://www.motortrend.com/uploads/sites/7/2019/08/1964-Chevrolet-Impala-Passenger-Side-Front-View-02.jpg?fit=around%7C875:492"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://www.motortrend.com/uploads/sites/7/2019/08/1964-Chevrolet-Impala-Passenger-Side-Front-View-02.jpg?fit=around%7C875:492"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://www.motortrend.com/uploads/sites/7/2019/08/1964-Chevrolet-Impala-Passenger-Side-Front-View-02.jpg?fit=around%7C875:492"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://www.motortrend.com/uploads/sites/7/2019/08/1964-Chevrolet-Impala-Passenger-Side-Front-View-02.jpg?fit=around%7C875:492"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://www.motortrend.com/uploads/sites/7/2019/08/1964-Chevrolet-Impala-Passenger-Side-Front-View-02.jpg?fit=around%7C875:492"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://www.motortrend.com/uploads/sites/7/2019/08/1964-Chevrolet-Impala-Passenger-Side-Front-View-02.jpg?fit=around%7C875:492"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img
+                src="https://www.motortrend.com/uploads/sites/7/2019/08/1964-Chevrolet-Impala-Passenger-Side-Front-View-02.jpg?fit=around%7C875:492"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div>
+                  <button type="button" class="btn btn-primary">Update</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
