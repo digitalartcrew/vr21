@@ -118,7 +118,13 @@
                     >
                       Close
                     </button>
-                    <button type="button" class="btn btn-primary">Save</button>
+                    <button
+                      type="button"
+                      id="savePostButton"
+                      class="btn btn-primary"
+                    >
+                      Save
+                    </button>
                   </div>
                 </div>
               </div>
@@ -163,7 +169,13 @@
                 >
                   Cancel
                 </button>
-                <button type="button" class="btn btn-primary">Confirm</button>
+                <button
+                  type="button"
+                  id="deleteCardButton"
+                  class="btn btn-primary"
+                >
+                  Confirm
+                </button>
               </div>
             </div>
           </div>
@@ -184,19 +196,33 @@
     ></script>
 
     <script>
-      const contentCard = `
+      const createUpdateModal = document.querySelector("#createUpdateModal");
+      let saveModalBtn = document.querySelector("#savePostButton");
+      let deleteModalBtn = document.querySelector("#deleteCardButton");
+
+      const deleteModal = document.querySelector("#deleteModal");
+
+      var imageUrl = document.querySelector("#imageUrl").value;
+      var title = document.querySelector("#title").value;
+      var description = document.querySelector("#description").value;
+      var existingCars = [];
+      JSON.parse(localStorage.getItem("cars")) === null
+        ? (existingCars = [])
+        : (existingCars = JSON.parse(localStorage.getItem("cars")));
+
+      for (i = 0; i < existingCars.length; i++) {
+        carCard = `
       <div class="col-md-3">
-              <div class="card" data-car-id="1">
+              <div class="card" data-car-id=${existingCars[i].id}>
                 <img
-                  src="https://www.motortrend.com/uploads/sites/7/2019/08/1964-Chevrolet-Impala-Passenger-Side-Front-View-02.jpg?fit=around%7C875:492"
+                  src="${existingCars[i].image}"
                   class="card-img-top"
                   alt="..."
                 />
                 <div class="card-body">
-                  <h5 class="card-title">64 Impala</h5>
+                  <h5 class="card-title">${existingCars[i].title}</h5>
                   <p class="card-text">
-                    Some quick example text to build on the card title and make up
-                    the bulk of the card's content.
+                    ${existingCars[i].description}
                   </p>
                   <div>
                     <button
@@ -204,44 +230,86 @@
                       class="btn btn-primary"
                       data-bs-toggle="modal"
                       data-bs-target="#createUpdateModal"
-                    >
-                      Update
-                    </button>
+                    >Update</button>
                     <button
                       type="button"
                       class="btn btn-primary"
                       data-bs-toggle="modal"
                       data-bs-target="#deleteModal"
-                    >
-                      Delete
-                    </button>
+                    >Delete</button>
                   </div>
                 </div>
               </div>
             </div>
       `;
 
-      document
-        .querySelector(".row")
-        .insertAdjacentHTML("beforeend", contentCard);
+        document.querySelector(".row").insertAdjacentHTML("beforeend", carCard);
+      }
 
-      const createUpdateModal = document.querySelector("#createUpdateModal");
-      // const updateButton = document.querySelector();
+      let updating = false;
 
-      createUpdateModal.addEventListener("show.bs.modal", (e) => {
-        console.log(e.relatedTarget);
+      deleteModal.addEventListener("show.bs.modal", (e) => {
+        deleteModalBtn.addEventListener("click", () => {
+          let foundCar = existingCars.find(
+            (car) =>
+              car.id ===
+              Number.parseInt(e.relatedTarget.closest(".card").dataset.carId)
+          );
+          existingCars.splice(existingCars.indexOf(foundCar), 1);
+
+          localStorage.setItem("cars", JSON.stringify(existingCars));
+          location.reload();
+        });
       });
 
-      const imageUrl = document.querySelector("#imageUrl");
+      deleteModal.addEventListener("hide.bs.modal", (e) => {
+        oldModalBtn = deleteModalBtn;
+        newModalBtn = oldModalBtn.cloneNode(true);
+        oldModalBtn.parentNode.replaceChild(newModalBtn, oldModalBtn);
+        deleteModalBtn = newModalBtn;
+      });
 
-      // create a div use create element
-      const columnCard = document.createElement;
-      // set class name using setAttribute
-      // add placeholder text using innerText
+      createUpdateModal.addEventListener("show.bs.modal", (e) => {
+        e.relatedTarget.innerText === "Update"
+          ? ((updating = true),
+            (document.querySelector(".modal-title").innerText = "Update Card"))
+          : ((updating = false),
+            (document.querySelector(".modal-title").innerText = "Create Card"));
 
-      // select element you want to append data
-      // pass in element
-      // run program
+        saveModalBtn.addEventListener("click", () => {
+          if (!updating) {
+            existingCars.push({
+              id: existingCars.length,
+              image: document.querySelector("#imageUrl").value,
+              title: document.querySelector("#title").value,
+              description: document.querySelector("#description").value,
+            });
+
+            localStorage.setItem("cars", JSON.stringify(existingCars));
+          } else {
+            let foundCar = existingCars.find(
+              (car) =>
+                car.id ===
+                Number.parseInt(e.relatedTarget.closest(".card").dataset.carId)
+            );
+
+            foundCar.image = document.querySelector("#imageUrl").value;
+            foundCar.title = document.querySelector("#title").value;
+            foundCar.description = document.querySelector("#description").value;
+
+            localStorage.setItem("cars", JSON.stringify(existingCars));
+          }
+
+          location.reload();
+        });
+      });
+
+      createUpdateModal.addEventListener("hide.bs.modal", (e) => {
+        oldModalBtn = saveModalBtn;
+        newModalBtn = oldModalBtn.cloneNode(true);
+        oldModalBtn.parentNode.replaceChild(newModalBtn, oldModalBtn);
+        saveModalBtn = newModalBtn;
+      });
     </script>
   </body>
 </html>
