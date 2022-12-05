@@ -47,6 +47,7 @@
               class="btn btn-primary"
               data-bs-toggle="modal"
               data-bs-target="#createModal"
+              id="add-button"
             >
               Add
             </button>
@@ -805,5 +806,13 @@
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      document.querySelector("#add-button").innerText = "Add New Car";
+
+      document.querySelector("#add-button").addEventListener("click", (e) => {
+        debugger;
+      });
+    </script>
   </body>
 </html>
