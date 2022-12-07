@@ -42,13 +42,7 @@
           <div class="container-fluid">
             <a class="navbar-brand">Classic Cars</a>
             <!-- Button trigger modal -->
-            <button
-              type="button"
-              class="btn btn-primary"
-              data-bs-toggle="modal"
-              data-bs-target="#createModal"
-              id="add-button"
-            >
+            <button type="button" class="btn btn-primary" id="add-button">
               Add
             </button>
 
@@ -129,7 +123,7 @@
 
       <main>
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-3" data-car-id="1">
             <div class="card">
               <img
                 src="https://www.motortrend.com/uploads/sites/7/2019/08/1964-Chevrolet-Impala-Passenger-Side-Front-View-02.jpg?fit=around%7C875:492"
@@ -163,7 +157,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3" data-card-id="2">
             <div class="card">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/f/f3/%2769_Plymouth_Road_Runner_%28Auto_classique_Showtime_Muscle_Cars_%2712%29.JPG"
@@ -268,7 +262,7 @@
         </div>
 
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-3" data-card-id="3">
             <div class="card">
               <img
                 src="https://www.motortrend.com/uploads/sites/7/2019/08/1964-Chevrolet-Impala-Passenger-Side-Front-View-02.jpg?fit=around%7C875:492"
@@ -808,10 +802,8 @@
     ></script>
 
     <script>
-      document.querySelector("#add-button").innerText = "Add New Car";
-
       document.querySelector("#add-button").addEventListener("click", (e) => {
-        debugger;
+        console.log("Add new");
       });
     </script>
   </body>
