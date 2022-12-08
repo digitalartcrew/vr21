@@ -11,10 +11,15 @@
       All the way out
       <div onclick="alert('Even I was alerted'); event.stopPropagation()">
         Outer
-        <div onclick="alert('I was alerted');event.stopPropagation()">
-          Inner
-        </div>
+        <div class="inner">Inner</div>
       </div>
     </div>
+
+    <script>
+      document.querySelector(".inner").addEventListener("click", (e) => {
+        alert("I am the inner child");
+        e.stopPropagation();
+      });
+    </script>
   </body>
 </html>

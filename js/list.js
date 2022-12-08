@@ -1,5 +1,5 @@
-// "use strict";
+"use strict";
 
-name = "Donte";
+const myVar = "some data";
 
-console.log(name);
+console.log("My data: ", myVar);
